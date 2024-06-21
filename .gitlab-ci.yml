@@ -1,25 +1,13 @@
-image: python:3.9
 
-before_script:
-  - git config --global user.name "Gitlab CI"
-  - git config --global user.email "GitlabCI@standart1c.ru"
-  - pip install -r requirements.txt
+stages:
+  - release
 
-pages:
-  stage: deploy
+create_release:
+  stage: release
+  image: konstanta.gitlab.yandexcloud.net:5050/konstanta-it/infrastructure/onec-docker:1.1.5
+  tags:
+    - docker
+  rules:
+    - if: $CI_COMMIT_TAG =~ /^v[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$/
   script:
-  - mkdocs build -s
-  - mv site public
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
-  - main
-  
-test:
-  stage: test
-  script:
-  - mkdocs build -s
-  only:
-  - merge_requests
+    - oscript ${CI_PROJECT_DIR}/.gitlab/scripts/1script/create_release.os
