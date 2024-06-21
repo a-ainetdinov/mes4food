@@ -1,5 +1,5 @@
 ﻿site_name: Руководство пользователя
-site_url: 'https://Konstanta-it.github.io/mes4food'
+site_url: 'https://a-ainetdinov.github.io/mes4food'
 
 theme:
   name: 'material'
@@ -16,8 +16,8 @@ theme:
   include_search_page: false
   search_index_only: true
 
-repo_name: 'Konstanta-it/mes4food'
-repo_url: https://github.com/Konstanta-it/mes4food
+repo_name: 'a-ainetdinov/mes4food'
+repo_url: https://github.com/a-ainetdinov/mes4food
 
 markdown_extensions:
     - markdown.extensions.toc:
