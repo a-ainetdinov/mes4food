@@ -2,6 +2,9 @@
 
 <h2> Общая информация </h2>
 
+
+- тест
+
 - [Лицензирование](CommonInformation/Licensing.md)
 - [Номенклатура](CommonInformation/Nomenclature.md)
 - [Виды номенклатуры](CommonInformation/KindOfNomenclature.md)
